@@ -149,4 +149,3 @@ document.addEventListener('DOMContentLoaded', () => {
 }, false);
 
 
-//edit and commit and push in vs code git area
