@@ -141,7 +141,6 @@ searchInput.onkeyup = function () {
 };
 
 
-
 // when page loads execute these functions
 document.addEventListener('DOMContentLoaded', () => {
    showPage(listItems, 1); // call this function and page two arguments 1) listitems const above and 2) current page to display
@@ -150,3 +149,4 @@ document.addEventListener('DOMContentLoaded', () => {
 }, false);
 
 
+//edit and commit and push in vs code git area
