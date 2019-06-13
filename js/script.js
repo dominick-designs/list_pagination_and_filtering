@@ -148,4 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
    setFirstNavLiToActive(); // call this function to set the first navigation link to active class on page load
 }, false);
 
+/*
+add notes here then commit from VS Code directly
+*/
 
