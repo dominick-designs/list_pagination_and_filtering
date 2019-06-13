@@ -75,7 +75,7 @@ const page = document.querySelector('.page');
 const pageHeaderDiv = document.querySelector('.page-header');
 const studentList = document.querySelector('.student-list');
 const studentItem = document.querySelector('.student-item');
-const studentDetails = document.querySelector('.student-details');
+const studentDetails = document.querySelectorAll('.student-details');
 const searchDiv = document.createElement('div');
 searchDiv.setAttribute('class', 'student-search');
 searchDiv.className = 'student-search';
@@ -101,8 +101,8 @@ pageHeaderDiv.appendChild(searchDiv);
    // function to make search form work 
 
 const searchFunction = (() => {
-   let valueOfA = studentDetails.querySelector('h3').innerHTML;
-   console.log(valueOfA + ' this is value of A')
+   //let valueOfA = studentDetails.querySelector('h3').innerHTML;
+   //console.log(valueOfA + ' this is value of A')
    let searchValue = searchInput.value;
    console.log('value of input box ' + searchValue)
    
@@ -110,7 +110,7 @@ const searchFunction = (() => {
       var name = studentDetails[i].innerHTML;
       console.log(name + 'this is name')
       if (name.indexOf(searchValue) > -1) {
-         studentDetails[i].style.display = 'none';
+         studentDetails[i].style.display = 'list-item';
       } else {
          studentDetails[i].style.display = 'none';
       }
@@ -124,16 +124,16 @@ searchButton.addEventListener('click', (e) => {
 });
 
 searchInput.onkeyup = function () {
-   let valueOfA = studentDetails.querySelector('h3').innerHTML;
-   console.log(valueOfA + ' this is value of A')
+   // let valueOfA = studentDetails.querySelector('h3').innerHTML;
+   //console.log(valueOfA + ' this is value of A')
    let searchValue = searchInput.value;
    console.log('value of input box ' + searchValue)
 
    for (let i = 0; i < studentDetails.length; i++) {
-      var name = studentDetails[i].innerHTML;
+      var name = studentDetails[i].querySelector('h3').innerHTML;
       console.log(name + 'this is name')
       if (name.includes(searchValue) > -1) {
-         studentDetails[i].style.display = 'block';
+         studentDetails[i].style.display = 'list-';
       } else {
          studentDetails[i].style.display = 'none';
       }
@@ -148,7 +148,4 @@ document.addEventListener('DOMContentLoaded', () => {
    setFirstNavLiToActive(); // call this function to set the first navigation link to active class on page load
 }, false);
 
-/*
-add notes here then commit from VS Code directly
-*/
 
