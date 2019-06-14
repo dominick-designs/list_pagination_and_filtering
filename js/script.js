@@ -107,14 +107,17 @@ const searchFunction = (() => {
    let searchValue = searchInput.value;
    console.log('value of input box ' + searchValue)
    
-   for (let i = 0; i < studentDetails.length; i++) {
-      var name = studentDetails[i].innerHTML;
+   for (let i = 0; i < studentItem.length; i++) {
+      var name = studentItem[i].innerHTML;
       console.log(name + 'this is name')
       if (name.includes(searchValue)) {
-         studentDetails[i].style.display = 'list-item';
+         studentItem[i].style.display = 'list-item';
+         let getTheNavDiv = document.querySelector('.pagination');
+         getTheNavDiv.style.display = 'none';
       } else {
-         studentDetails[i].style.display = 'none';
+         studentItem[i].style.display = 'none';
       }
+      
    }
 }); 
 
@@ -125,19 +128,22 @@ searchButton.addEventListener('click', (e) => {
 });
 
 searchInput.onkeyup = function () {
-   // let valueOfA = studentDetails.querySelector('h3').innerHTML;
+   //let valueOfA = studentDetails.querySelector('h3').innerHTML;
    //console.log(valueOfA + ' this is value of A')
    let searchValue = searchInput.value;
    console.log('value of input box ' + searchValue)
 
-   for (let i = 0; i < studentDetails.length; i++) {
-      var name = studentDetails[i].querySelector('h3').innerHTML;
+   for (let i = 0; i < studentItem.length; i++) {
+      var name = studentItem[i].innerHTML;
       console.log(name + 'this is name')
-      if (name.includes(searchValue) > -1) {
-         studentDetails[i].style.display = 'list-item';
+      if (name.includes(searchValue)) {
+         studentItem[i].style.display = 'list-item';
+         let getTheNavDiv = document.querySelector('.pagination');
+         getTheNavDiv.style.display = 'none';
       } else {
-         studentDetails[i].style.display = 'none';
+         studentItem[i].style.display = 'none';
       }
+      
    }
 };
 
