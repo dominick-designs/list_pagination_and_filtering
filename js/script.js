@@ -2,8 +2,8 @@
 Treehouse Techdegree:
 FSJS project 2 - List Filter and Pagination
 ******************************************/
-   
-// Study guide for this project - https://drive.google.com/file/d/1OD1diUsTMdpfMDv677TfL1xO2CEkykSz/view?usp=sharing
+
+
 
 
 /* global variables [each used or passed in more than one function] */
@@ -102,14 +102,9 @@ pageHeaderDiv.appendChild(searchDiv);
    // function to make search form work 
 
 const searchFunction = (() => {
-   //let valueOfA = studentDetails.querySelector('h3').innerHTML;
-   //console.log(valueOfA + ' this is value of A')
-   let searchValue = searchInput.value;
-   console.log('value of input box ' + searchValue)
-   
+   let searchValue = searchInput.value;   
    for (let i = 0; i < studentItem.length; i++) {
       var name = studentItem[i].innerHTML;
-      console.log(name + 'this is name')
       if (name.includes(searchValue)) {
          studentItem[i].style.display = 'list-item';
          let getTheNavDiv = document.querySelector('.pagination');
@@ -127,23 +122,18 @@ searchButton.addEventListener('click', (e) => {
    searchFunction();
 });
 
-searchInput.onkeyup = function () {
-   //let valueOfA = studentDetails.querySelector('h3').innerHTML;
-   //console.log(valueOfA + ' this is value of A')
-   let searchValue = searchInput.value;
-   console.log('value of input box ' + searchValue)
 
+searchInput.onkeyup = function () {
+   let searchValue = searchInput.value;
    for (let i = 0; i < studentItem.length; i++) {
       var name = studentItem[i].innerHTML;
-      console.log(name + 'this is name')
       if (name.includes(searchValue)) {
          studentItem[i].style.display = 'list-item';
-         let getTheNavDiv = document.querySelector('.pagination');
-         getTheNavDiv.style.display = 'none';
       } else {
          studentItem[i].style.display = 'none';
       }
-      
+      // let getTheNavDiv = document.querySelector('.pagination');
+      // getTheNavDiv.style.display = 'none';
    }
 };
 
