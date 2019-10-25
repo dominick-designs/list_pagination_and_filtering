@@ -1,6 +1,6 @@
 # List Pagination and Filtering
 
-* [view live demo here](https://dominick-designs.github.io/list_pagination_and_filtering-v1/)
+* [View live demo here](https://list-pagination-and-filter.dominickdesigns.space/)
 
 * use DOM manipulation to paginate a list of users
 * use search feature to filter list of users
