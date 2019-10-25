@@ -1,11 +1,3 @@
-/******************************************
-Treehouse Techdegree:
-FSJS project 2 - List Filter and Pagination
-******************************************/
-
-
-
-
 /* global variables [each used or passed in more than one function] */
 const ul = document.querySelector('ul');
 const listItems = ul.getElementsByTagName('li');
@@ -100,7 +92,6 @@ searchDiv.appendChild(form);
 pageHeaderDiv.appendChild(searchDiv);
 
    // function to make search form work 
-
 const searchFunction = (() => {
    let searchValue = searchInput.value;   
    for (let i = 0; i < studentItem.length; i++) {
@@ -122,7 +113,6 @@ searchButton.addEventListener('click', (e) => {
    searchFunction();
 });
 
-
 searchInput.onkeyup = function () {
    let searchValue = searchInput.value;
    for (let i = 0; i < studentItem.length; i++) {
@@ -136,7 +126,6 @@ searchInput.onkeyup = function () {
       // getTheNavDiv.style.display = 'none';
    }
 };
-
 
 // when page loads execute these functions
 document.addEventListener('DOMContentLoaded', () => {
